@@ -2,7 +2,7 @@
 
 var assignments = {};
 
-fetch("config.json")
+fetch("config.json", {cache: "no-store"})
     .then(resp => resp.json())
     .then(generateNames);
 
@@ -10,6 +10,14 @@ fetch("config.json")
 // Sets the global 'assignments' object so it can be used by the getAssignedName function
 function generateNames(config) {
     console.debug('Config:', config);
+
+    if (!config.hasOwnProperty('randomSeed') || !config.hasOwnProperty('names')) {
+        console.error('Your config is broken.');
+
+        document.querySelector('#feedback').innerText = "Something went wrong while parsing your config. Check your config.json file.";
+
+        return;
+    }
 
     var rand = new Math.seedrandom(config.randomSeed);
 
