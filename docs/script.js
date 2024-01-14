@@ -11,7 +11,7 @@ fetch("config.json")
 function generateNames(config) {
     console.debug('Config:', config);
 
-    var rand = new Math.seedrandom(config.seedValue);
+    var rand = new Math.seedrandom(config.randomSeed);
 
     // Make a copy of the array to ensure we don't have duplicates
     var mapto = Array.from(config.names);
