@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Secret Santa Picker</title>
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/seedrandom/3.0.5/seedrandom.min.js"
+        integrity="sha512-+Ru50BzEpZjlFzVnjSmJfYFPFfY2hS0Kjlu/IvqaJoux7maF5lJrRVUJWJ2LevPls7rd242GLbWEt+zAo4OVVQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="script.js"></script>
+
+    <h1>🎄Secret Santa Picker🎄</h1>
+    <p>Enter your name to find your Secret Santa gift receiver!</p>
+
+    <form onsubmit="event.preventDefault(); getAssignedName()">
+        <input type="text" id="whoareyou" autofocus />
+        <button type="submit">Get Your 🎅</button>
+        <div id="feedback"></div>
+    </form>
+
+    <div id="answer-container">
+        <div id="answer-bow">
+            <div id="answer-bow-left"></div>
+            <div id="answer-bow-right"></div>
+        </div>
+        <div id="answer-ribbon"></div>
+        <div id="answer"></div>
+    </div>
+
+</body>
+
+</html>

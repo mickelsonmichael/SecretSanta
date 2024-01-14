@@ -1,0 +1,94 @@
+body {
+    background-color: #152545;
+    color: white;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+h1 {
+    font-weight: lighter;
+}
+
+p {
+    font-size: large;
+}
+
+button,
+input {
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    border: none;
+}
+
+button {
+    background-color: #3050aa;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #60aacc;
+}
+
+#feedback {
+    font-size: small;
+    color: #ccc;
+    margin-top: 0.5rem;
+}
+
+#answer-container {
+    display: none;
+    height: 9rem;
+    min-width: 10rem;
+    background: rgb(0, 212, 255);
+    background: linear-gradient(90deg, rgba(0, 212, 255, 1) 1rem, rgba(233, 17, 17, 1) 1rem, rgba(233, 17, 17, 1) 2rem, rgba(0, 212, 255, 1) 2rem);
+    display: inline-block;
+    margin: 2rem auto;
+    box-shadow: white 0 0 15px -5px;
+}
+
+#answer-bow {
+    margin-top: -0.9rem;
+    margin-left: 0.5rem;
+    text-align: left;
+}
+
+#answer-bow-left,
+#answer-bow-right {
+    display: inline-block;
+    border-radius: 99px;
+    height: 0;
+    width: 0;
+}
+
+#answer-bow-left {
+    border-top: 7.5px solid transparent;
+    border-bottom: 5px solid red;
+    border-left: 20px solid red;
+    border-right: 2px solid transparent;
+}
+
+#answer-bow-right {
+    border-top: 7.5px solid transparent;
+    border-bottom: 5px solid red;
+    border-left: 2px solid transparent;
+    border-right: 20px solid red;
+    margin-left: -8px;
+}
+
+
+#answer-ribbon {
+    background-color: rgba(233, 17, 17, 1);
+    height: 1rem;
+    margin-top: 1rem;
+}
+
+#answer {
+    margin: 2.5rem 1rem 2.5rem 2.5rem;
+    padding: 0 1rem;
+    color: rgba(233, 17, 17, 1);
+    font-size: xx-large;
+    font-weight: bolder;
+    text-transform: capitalize;
+}
